@@ -1,0 +1,179 @@
+* {
+
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: 0.3s;
+    position: relative;
+}
+
+.sembtn :hover {
+    opacity: 0.4;
+}
+
+.logo {
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    background-color: #0e112075;
+    height: 12vh;
+    box-shadow: 1px 1px 4px #000000;
+    justify-content: space-between;
+    padding: 0 5%;
+}
+
+body {
+    background: url("fudno12.jpg") no-repeat;
+    background-size: cover;
+    overflow-x: hidden;/*Correção bug*/
+}
+
+.img_logo_header {
+    width: 150px;
+    margin-left: 50px;
+    margin-top: 15px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px
+}
+
+nav ul li:not(:last-child) a:hover,
+nav ul li:not(:last-child) a:focus {
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+nav ul li.btn a {
+    background: transparent;
+    background-color: #eeeeee;
+    color: rgb(0, 0, 0);
+    border: 1px solid #000000;
+    padding: 9px 20px;
+    border-radius: 30px;
+    line-height: 1.4;
+    font-size:15px;
+    font-weight: 500;
+    margin-left: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav ul li.btn:hover a {
+    border: 1px solid rgb(0, 0, 0);
+    color: rgb(248, 248, 248);
+    background: rgb(0, 0, 0);
+    transition: .4s;
+}
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: #fff;
+    margin: 8px;
+    transition: 0.3s;
+
+}
+
+.img_globo_header{
+    width: 40px;
+}
+
+@media (max-width: 1300px) {
+    body {
+        overflow-x: hidden;  /*Correção bug*/
+        background: url("fudno12.jpg") no-repeat center;
+    }
+
+    .nav-list {
+        position: absolute;
+        top: 12vh;
+        right: 0;
+        width: 50vw;
+        height: 92vh;
+        background-color: #0e112075;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in;
+    }
+
+    .nav-list li {
+        margin-left: 0;
+        opacity: 0;
+    }
+
+    .mobile-menu {
+        display: block;
+
+    }
+
+    .img_logo_header {
+        width: 150px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        margin-left: 2px;
+        margin-right: 0px;
+        margin-left: 1px;
+    }
+}
+
+.nav-list.active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+    opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+}
+
+main {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main div {
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
